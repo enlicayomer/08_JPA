@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="PU_08_JPA" transaction-type="RESOURCE_LOCAL">
+		 <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>com.omerenlicay.Personel</class>
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/firmaveritabani" />
+			<property name="javax.persistence.jdbc.user" value="root" />
+			<property name="javax.persistence.jdbc.password" value="1234" />
+
+
+
+			<property name="hibernate.show_sql" value="true" />
+
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<!-- "update" yazarsak yeniden oluşturmaz(varsa silmez)günceller -->
+
+			<property name="hibernate.current_session_context_class"
+				value="thread" />
+
+			<property name="hibernate.query.factory_class"
+				value="org.hibernate.hql.classic.ClassicQueryTranslatorFactory" />
+
+
+			<!-- <property name="hibernate.connection.pool_size" value="1"/> <property 
+				name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/> <property 
+				name="hibernate.cache.provider_class" value="org.hibernate.cache.internal.NoCacheProvider" 
+				/> <property name="hibernate.show_sql" value="true" /> <property name="hibernate.hbm2ddl.auto" 
+				value="update"/> -->
+
+
+
+
+
+		</properties>
+	</persistence-unit>
+</persistence>
